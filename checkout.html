@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - 3D Industrial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #ffffff; font-family: Arial, sans-serif;">
+    <section style="padding: 50px; text-align: center;">
+        <h1 style="color: #2b2d42;">Finalizar Pedido</h1>
+        <p>Escolha o método de pagamento e forma de entrega.</p>
+        
+        <div style="margin: 30px auto; max-width: 400px; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+            <h3>Resumo da Compra</h3>
+            <p>Produto: Lavador de Mãos 4 Posições</p>
+            <hr>
+            <button style="background: #ef233c; color: white; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px;">
+                PAGAR COM PIX (GERAR QR CODE)
+            </button>
+            <button style="background: #333; color: white; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px;">
+                RETIRAR NA FÁBRICA (CHAPECÓ)
+            </button>
+        </div>
+    </section>
+
+    // Dentro do checkout.html antes de fechar o </body>
+<script>
+    const qtd = localStorage.getItem('quantidadeSelecionada') || 1;
+    const precoUnitario = 17990.00;
+    const total = (qtd * precoUnitario).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    
+    // Se você tiver um ID no seu resumo de compra, pode atualizar o texto:
+    // document.getElementById('resumo-total').innerText = `Total: ${total}`;
+</script>
+
+
+</body>
+</html>

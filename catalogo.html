@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - 3D Industrial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="pagina-catalogo">
+    </body>
+
+<header>
+    <div class="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="3D Industrial Logo">
+            </a>
+        </div>
+        <div class="user-actions">
+            <a href="index.html" class="active">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sics.html">SICS</a>
+            
+            <div id="userArea" style="display: inline-block; vertical-align: middle;">
+                <a href="javascript:void(0)" id="guestUser" onclick="openModal()">
+                    <i class="fas fa-user"></i> Entrar
+                </a>
+
+                <div id="loggedUser" style="display:none; position: relative;">
+                    <div class="user-profile-trigger" onclick="toggleUserMenu()" style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-circle" style="font-size: 1.5rem; color: white;"></i>
+                        <span id="userNameNav" style="color: white;">Perfil</span>
+                    </div>
+
+                    <div id="userDropdown" class="user-dropdown" style="display: none; position: absolute; right: 0; top: 100%; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); min-width: 200px; z-index: 1000; margin-top: 10px; padding: 10px 0;">
+                        <div style="padding: 10px 15px; border-bottom: 1px solid #eee;">
+                            <small style="color: #666; display: block;">Logado como:</small>
+                            <strong id="fullUserName" style="color: #333;">Usuário</strong>
+                        </div>
+                        <a href="config.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-user-cog" style="margin-right: 8px;"></i> Meus Dados
+                        </a>
+                        <a href="rastreio.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Rastrear Pedido
+                        </a>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 5px 0;">
+                        <a href="javascript:void(0)" onclick="logout()" style="display: block; padding: 10px 15px; color: #d9534f; text-decoration: none; font-weight: bold;">
+                            <i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i> Sair da Conta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+<main class="container-limitado">
+    
+    <section class="secao-venda">
+        <h2 class="titulo-secao"><span>Compre Agora</span></h2>
+        
+        <div class="grid-produtos">
+            <div class="card-produto">
+                <div class="container-img">
+                    <img src="assets/LAVADOR-DE-MAOS-q5ky73zla1fnexo3u6irywudzghjjl334cobac2pwg.png" alt="Componente Industrial X">
+                </div>
+                <div class="info-venda">
+                    <h3>Lavador De Mãos 4 Posições</h3>
+                    <p class="preco">R$ 17.990,00</p>
+                    <button class="btn-comprar" onclick="window.location.href='produto-detalhe.html'">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divisor-industrial">
+
+    <section class="secao-especificos">
+        <h2 class="titulo-secao">Projetos <span>Sob Medida</span></h2>
+        <div class="grid-especificos">
+            
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/APLICADOR-DE-SANITIZANTE.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento desenvolvido pela 3D Industrial para aplicação de sanitizante em produtos embalados.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>APLICADOR DE SANITIZANTE</h3>
+                    <button class="btn-orcamento" data-nome="Aplicador de Sanitizante">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/ASPERSOR-ASSEPTICO.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>O aspersor asséptico modelo 3030 é um equipamento desenvolvido para aplicação de sanitizante. Tensão de alimentação: monofásico F+N 220V Produto: líquidos de baixa viscosidade, abaixo de 1,2 cP (Álcool 70% a 92,8%, bigamizada). Equipamento não necessita de ar comprimido.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>ASPERSOR ASSEÉPTICO</h3>
+                    <button class="btn-orcamento" data-nome="Aspersor Asseéptico">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/BALANCA-DE-PESAGEM-AUTOMATICA.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Capacidade de pesagem conforme necessidade; Controle através de Clp e IHM; Fácil calibração; Visualização de cada pesagem; Somatório de pesagem. Sistema de desviador podendo abastecer dois recipientes.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>BALANCA DE PESAGEM AUTOMATICA</h3>
+                    <button class="btn-orcamento" data-nome="Balanca de pesagem automatica">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/BARREIRA-SANITARIA.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Constituída por lavador continuo para lavagem de botas, dosador de sabão, lavador de mão 01P, dosador de sanitizante e catraca de saída. Podendo sofrer alterações de acordo com a necessidade do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>BARREIRA SANITÁRIA INTEGRADA</h3>
+                    <button class="btn-orcamento" data-nome="Barreira Sanitária Integrada">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/CARROS-DE-TRANSPORTE-q5ky6spj0107jm4ho1n94zouuu14z7ub2suhj0jfz4.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Fabricados em aço inox AISI 304; Capacidade conforme necessidade do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>CARROS DE TRANSPORTE</h3>
+                    <button class="btn-orcamento" data-nome="Carros de Transporte">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/CATRACA-DE-ACESSO-E-BLOQUEIO-q5ky6ul7dp2s6u1rd2gi9z7s1lrvem1rr25ghkgnmo.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Catracas de acesso podem ser fornecidas com dosador de sabão ou sanitizante.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>CATRACA DE ACESSO E BLOQUEIO DE ACESSO</h3>
+                    <button class="btn-orcamento" data-nome="Catraca de Acesso e Bloqueio de Acesso">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/CHECADORA-DE-PESO-q5ky6wgvrd5cu1z1239reyqp8dilu098fbgfg4dva8.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Balança Checadora de Alta Performance - se apresenta ao mercado em projetos específicos que são desenvolvidos conforme a necessidade de cada cliente, feitos para pesagem e/ou verificação de produtos em movimento, principalmente usada para soluções dos segmentos Farmacêutico e Alimentício. Alta precisão e estabilização, devido ao sistema antivibração.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>CHECADORA DE PESO</h3>
+                    <button class="btn-orcamento" data-nome="Checadora de Peso">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/CHILLER-DE-RESFRIAMENTO-DE-CARCACA_MUIDOS-q5ky6wgvrd5cu1z1239reyqp8dilu098fbgfg4dva8.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Utilizado para resfriamento de diversos cortes produzidos na indústria de carnes, todos os chillers são projetados conforme a capacidade de produção do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>CHILLER DE RESFRIAMENTO DE CARCAÇA/MIÚDOS</h3>
+                    <button class="btn-orcamento" data-nome="Chiller de Resfriamento de Carcaca e Miudos">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/DEPILADOR-DE-PATAS-TIPO-CHARUTO-q5ky6wgvrd5cu1z1239reyqp8dilu098fbgfg4dva8.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento confeccionado em aço inox conforme necessidade do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>DEPILADOR DE PATAS TIPO CHARUTO</h3>
+                    <button class="btn-orcamento" data-nome="Depilador de Patas Tipo Charuto">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/DESENFORMADORA-DE-MATRIZE-q5ky6yck517xh9war430jy9mf59c9egp3kreeob2xs.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento desenvolvido pela 3D Industrial para facilitar a remoção de matrizes de queijos. Automática, é capaz de desenformar até 20 peças de queijo por minuto. Alimentação e saída de queijos e formas através de esteiras transportadoras. Equipamento de acordo com as normas regulamentadoras número 10 e 12.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>DESENFORMADORA DE MATRIZES</h3>
+                    <button class="btn-orcamento" data-nome="Desenformadora de Matrizes">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/DROPS-DE-CLASSIFICACAO-q5ky7088ipai4htkg4w9oxsjlx02oso5ru2dd88alc.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento destinado para trabalho na nórea, com objetivo do desenganche e classificação.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>DROPS DE CLASSIFICAÇÃO</h3>
+                    <button class="btn-orcamento" data-nome="Drops de Classificacao">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/ELEVADOR-DE-BOBINAS-q5ky723wwdd2rpqu55pitxbgsoqt46vmg3dcbs5i8w.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento desenvolvido para transporte e manuseio de bobinas de embalagens. Capacidade até 80Kg, equipamento com bateria acoplada.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>ELEVADOR DE BOBINAS</h3>
+                    <button class="btn-orcamento" data-nome="Elevador de Bobinas">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/ELEVADOR_TOMABADOR-DE-CARROS-DE-MASSA-VMAG-q5ky79mmf1ndclfwx8yjdvf5jrpqtrph54l85zucv4.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento com a função de fazer o descarregamento automático de carros de massa. Tombamento sistema mecânico constituído por moto redutor e corrente. Capacidades e dimensões projetado conforme a necessidade do cliente. Equipamento dentro das normas NR10 e NR12.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>ELEVADOR/TOMBADOR DE CARROS DE MASSA (VMAG)</h3>
+                    <button class="btn-orcamento" data-nome="Elevador e Tombador de Carros de Massa">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/ESTEIRA-TRANSPORTADORA-q5ky7088ipai4htkg4w9oxsjlx02oso5ru2dd88alc.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Desenvolvemos esteiras transportadoras para as mais variadas aplicações, conforme a necessidade do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>ESTEIRAS TRANSPORTADORAS</h3>
+                    <button class="btn-orcamento" data-nome="Esteiras Transportadoras">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/LAVADOR-DE-BOTAS-q5ky723wwdd2rpqu55pitxbgsoqt46vmg3dcbs5i8w.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Os lavadores de bota da 3D Industrial, são projetados de forma que atendam completamente as normas vigentes de segurança do trabalho NR 10, NR 12.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>LAVADOR DE BOTAS</h3>
+                    <button class="btn-orcamento" data-nome="Lavador de Botas">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/LAVADOR-DE-CAIXAS-q5ky723wwdd2rpqu55pitxbgsoqt46vmg3dcbs5i8w.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento desenvolvido para lavagem de caixas, projetadas conforme necessidade do cliente.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>LAVADOR DE CAIXAS</h3>
+                    <button class="btn-orcamento" data-nome="Lavador de Caixas">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/LAVADOR-DE-MAOS-q5ky73zla1fnexo3u6irywudzghjjl334cobac2pwg.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento fabricado em aço inox, acionamento das torneiras através de joelho, pés ou sensores.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>LAVADOR DE MÃOS</h3>
+                    <button class="btn-orcamento" data-nome="Lavador de Maos">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/MISTURADOR-Y-q5ky73zla1fnexo3u6irywudzghjjl334cobac2pwg.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>EqIndicado para mistura de materiais sólido ou com baixo teor de umidade. Equipamento dentro das normas NR10 e NR12. Para verificar a capacidade atendida, consultar nossa engenharia.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>MISTURADOR Y</h3>
+                    <button class="btn-orcamento" data-nome="Misturador Y">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/ROSCA-TRANSPORTADORA-q5ky75v9npi825ldj7c13wdb6889yzajslza8vzxk0.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Desenvolvidas conforme necessidade e exigências do cliente. Fabricadas nas dimensões especifica para cada aplicação.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>ROSCAS TRANSPORTADORAS</h3>
+                    <button class="btn-orcamento" data-nome="Roscas Transportadoras">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/SISTEMA-DE-TRANSPORTE-COM-PESAGEM-AUTOMATICA-q5ky75v9npi825ldj7c13wdb6889yzajslza8vzxk0.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento desenvolvido pela 3D Industrial para efetuar pesagem, transporte descarregamento de forma automatizada. Possui sistema de higienização e também dispõe de sistema de receitas, podendo fazer combinações e sequências diversas.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>SISTEMA DE TRANSPORTE COM PESAGEM AUTOMÁTICA</h3>
+                    <button class="btn-orcamento" data-nome="Sistema de Transporte com Pesagem Automatica">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/SORTER-DE-CLASSIFICACAO-POP-UP-q5ky77qy1dkspdin885a8vw8czz0edi0gva97fx57k.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Sistema de distribuição de caixas, desvio através de sorter POP UP, que possibilita até 5 saídas, podendo ser feito através de apontamento de cor, código de barras e/ou QR code.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>SORTER DE CLASSIFICAÇÃO POP-UP</h3>
+                    <button class="btn-orcamento" data-nome="Sorter de Classificacao pop-up">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/TRANSPORTADOR-AEREO-q5ky77qy1dkspdin885a8vw8czz0edi0gva97fx57k.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Estrutura fabricada em aço inox, percurso e capacidade projetados conforme a necessidade do cliente. A 3D industrial produz todos os tipos assessórios como curvas, sobe, desce, esticador e tracionamento necessários para este equipamento.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>TRANSPORTADOR AÉREO</h3>
+                    <button class="btn-orcamento" data-nome="Transportador Aereo">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            <div class="card-especifico">
+                <div class="container-img-quadrada">
+                    <img src="assets/TUNEL-DE-ENCOLHIMENTO-q5ky79mmf1ndclfwx8yjdvf5jrpqtrph54l85zucv4.png" alt="Projeto">
+                    <div class="card-overlay">
+                        <h3>DETALHES TÉCNICOS</h3>
+                        <p>Equipamento projetado para melhorar o aspecto e segurança de embalagens a vácuo. Sistema de banho realizado por uma cascata de água quente, aquecida por vapor ou elétrico garantindo excelentes resultados de encolhimento.</p>
+                    </div>
+                </div>
+                <div class="info-especifico">
+                    <h3>TÚNEL DE ENCOLHIMENTO</h3>
+                    <button class="btn-orcamento" data-nome="Tunel de Encolhimento">SOLICITAR ORÇAMENTO</button>
+                </div>
+            </div>
+
+            </div>
+    </section>
+</main>
+
+<section class="chamada-whatsapp">
+    <div class="container-whatsapp">
+        <div class="whatsapp-content">
+            <i class="fab fa-whatsapp"></i>
+            <div class="texto-whatsapp">
+                <h3>Não encontrou o que buscava?</h3>
+                <p>Nossa equipe está pronta para desenvolver seu projeto sob medida. Fale conosco agora!</p>
+            </div>
+            <a href="https://wa.me/49998011401" target="_blank" class="btn-whatsapp-catalogo">
+                FAZER ORÇAMENTO PERSONALIZADO
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="secao-downloads container-limitado">
+    <h2 class="titulo-secao">Catálogos <span>Técnicos (PDF)</span></h2>
+    
+    <div class="grid-downloads">
+        <a href="assets/catalogo_aves.pdf" class="card-download" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>AVES</span>
+            <small>Baixar PDF</small>
+        </a>
+
+        <a href="assets/catalogo_bovinos.pdf" class="card-download" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>BOVINOS</span>
+            <small>Baixar PDF</small>
+        </a>
+
+        <a href="assets/catalogo_laticinios.pdf" class="card-download" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>LATICÍNIOS</span>
+            <small>Baixar PDF</small>
+        </a>
+
+        <a href="assets/catalogo_peixes.pdf" class="card-download" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>PEIXES</span>
+            <small>Baixar PDF</small>
+        </a>
+
+        <a href="assets/catalogo_suinos.pdf" class="card-download" download>
+            <i class="fas fa-file-pdf"></i>
+            <span>SUÍNOS</span>
+            <small>Baixar PDF</small>
+        </a>
+    </div>
+</section>
+
+<div id="whatsapp-widget">
+    <div id="whatsapp-chat-box" class="chat-box-hidden">
+        <div class="chat-header">
+            <i class="fab fa-whatsapp"></i>
+            <span>Atendimento 3D Industrial</span>
+            <button onclick="toggleWhatsApp()" class="close-chat">&times;</button>
+        </div>
+        <div class="chat-body">
+            <p>Olá, como podemos ajudar?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="wa-input" placeholder="Digite sua mensagem...">
+            <button onclick="enviarWhatsApp()" class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="whatsapp-main-button" onclick="toggleWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
+
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col about">
+            <img src="assets/logo.png" alt="3D Industrial" class="footer-logo">
+            <p>Inovação e tecnologia em soluções industriais e sustentabilidade desde 2016.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/3dindustrialoficial/"><i class="fab fa-instagram"></i></a>
+                <a href="https://br.linkedin.com/company/3dindustrial"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/3dindustrial.net/"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sics.html">SICS</a></li>
+                <li><a href="catalogo.html">Indústria</a></li>
+                <li><a href="index.html">Quem Somos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h4>Contato</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> (49) 99801-1401</li>
+                <li><i class="fas fa-envelope"></i> comercial@3dindustrial.net</li>
+                <li><i class="fas fa-map-marker-alt"></i> Chapecó - SC</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 3D Industrial. Todos os direitos reservados. | Desenvolvido com Tecnologia 3D</p>
+    </div>
+</footer>
+
+<div id="authModal">
+    <div class="modal-content-auth">
+        <div class="auth-tabs">
+            <button onclick="alternarAuth('login')" class="active">Entrar</button>
+            <button onclick="alternarAuth('cadastro')">Cadastrar</button>
+        </div>
+
+        <form id="formLogin">
+            <div class="auth-group">
+                <label>E-mail</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+            </div>
+            <div class="auth-group">
+                <label>Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="loginSenha" placeholder="********" required>
+            </div>
+            <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+            <button type="submit" class="btn-auth-submit">Acessar Conta</button>
+        </form>
+
+<form id="formCadastro" style="display:none;">
+    <h2 style="text-align:center; margin-bottom:20px;">Criar nova conta</h2>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Nome</label>
+            <i class="fas fa-user"></i>
+            <input type="text" id="regNome" placeholder="Nome" required>
+        </div>
+        <div class="auth-group">
+            <label>E-mail</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="regEmail" placeholder="E-mail" required>
+        </div>
+    </div>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Data de Nascimento</label>
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="regNascimento" required>
+        </div>
+    </div>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Senha</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" id="regSenha" placeholder="Senha" required>
+        </div>
+        <div class="auth-group">
+            <label>Confirmar</label>
+            <i class="fas fa-check-circle"></i>
+            <input type="password" id="regSenhaConf" placeholder="Confirmar" required>
+        </div>
+    </div>
+
+    <button type="submit" class="btn-auth-submit">FINALIZAR CADASTRO</button>
+</form>
+
+    <script src="script.js"></script>
+</body>
+</html>

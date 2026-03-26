@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SICS - Sistema Inteligente | Loja 3D Industrial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="3D Industrial Logo">
+            </a>
+        </div>
+        <div class="user-actions">
+            <a href="index.html" class="active">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sics.html">SICS</a>
+            
+            <div id="userArea" style="display: inline-block; vertical-align: middle;">
+                <a href="javascript:void(0)" id="guestUser" onclick="openModal()">
+                    <i class="fas fa-user"></i> Entrar
+                </a>
+
+                <div id="loggedUser" style="display:none; position: relative;">
+                    <div class="user-profile-trigger" onclick="toggleUserMenu()" style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-circle" style="font-size: 1.5rem; color: white;"></i>
+                        <span id="userNameNav" style="color: white;">Perfil</span>
+                    </div>
+
+                    <div id="userDropdown" class="user-dropdown" style="display: none; position: absolute; right: 0; top: 100%; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); min-width: 200px; z-index: 1000; margin-top: 10px; padding: 10px 0;">
+                        <div style="padding: 10px 15px; border-bottom: 1px solid #eee;">
+                            <small style="color: #666; display: block;">Logado como:</small>
+                            <strong id="fullUserName" style="color: #333;">Usuário</strong>
+                        </div>
+                        <a href="config.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-user-cog" style="margin-right: 8px;"></i> Meus Dados
+                        </a>
+                        <a href="rastreio.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Rastrear Pedido
+                        </a>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 5px 0;">
+                        <a href="javascript:void(0)" onclick="logout()" style="display: block; padding: 10px 15px; color: #d9534f; text-decoration: none; font-weight: bold;">
+                            <i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i> Sair da Conta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+    <section class="produto-detalhe">
+    <div class="container-produto">
+    <div class="produto-media">
+        <img src="assets/LAVADOR-DE-MAOS-q5ky73zla1fnexo3u6irywudzghjjl334cobac2pwg.png" alt="Lavador">
+    </div>
+
+    <div class="produto-infos">
+        <h1>Lavador De Mãos 4 Posições</h1>
+        <p class="sku">Código: 3D-IND-004</p>
+        
+        <h2 class="preco-destaque">R$ 17.990,00</h2>
+
+        <div class="metodo-entrega">
+            <label><input type="radio" name="entrega" checked> Buscar na Fábrica (Chapecó-SC)</label>
+            <label><input type="radio" name="entrega"> Entrega Industrial (Sob Consulta)</label>
+        </div>
+
+        <div class="acoes-compra">
+    <input type="number" value="1" min="1" id="qtd-produto">
+    <button type="button" onclick="irParaPagamento()" class="btn-finalizar-etapa">
+        COMPRAR AGORA
+    </button>
+</div>
+    </div>
+</div>
+
+<div class="produto-sinopse-completa">
+    <div class="abas-info">
+        <button class="aba-item ativa">Descrição</button>
+    </div>
+    <div class="conteudo-texto">
+        <h3>Sobre o Produto</h3>
+        <p>Lavatório Coletivo Industrial em Inox – 4 Posições com Acionamento pelo Joelho
+Garanta a máxima higiene e eficiência para sua equipe com o Lavador de Mãos Industrial de 4 postos. Projetado especificamente para ambientes que exigem rigoroso controle sanitário, como indústrias alimentícias, frigoríficos, hospitais e cozinhas industriais, este equipamento elimina o risco de contaminação cruzada.
+
+🛡️ Diferencial: Higiene 100% "Hands-Free"
+O sistema de acionamento mecânico via pressão no joelho permite que o colaborador lave as mãos sem tocar em registros ou torneiras. Isso atende plenamente às normas da ANVISA e do Ministério da Agricultura (SIF), garantindo segurança total no processo de higienização.
+
+📋 Especificações Técnicas
+Capacidade: 4 pessoas simultaneamente.
+
+Material: Aço Inoxidável (AISI 304 ou 430 - especificar o seu), resistente à corrosão e de fácil limpeza.
+
+Acionamento: 4 válvulas independentes reforçadas para uso constante com o joelho.
+
+Dimensões: [Inserir Largura] x [Inserir Altura] x [Inserir Profundidade] mm.
+
+Instalação: Modelo de fixar na parede (suspenso) ou com pés reforçados (especificar o seu).
+
+Acabamento: Escovado ou Polido de alto brilho.
+
+✨ Principais Benefícios
+Economia de Água: O fechamento automático após soltar a pressão do joelho evita desperdícios comuns em torneiras manuais.
+
+Alta Durabilidade: Estrutura robusta soldada em argônio (TIG), suportando o uso intenso de grandes equipes.
+
+Design Ergonômico: Altura e posicionamento das cubas projetados para evitar respingos fora do lavatório.
+
+Manutenção Simplificada: Componentes de reposição padrão e superfícies lisas que impedem o acúmulo de bactérias.
+
+🏭 Onde utilizar?
+Indústrias de Alimentos e Bebidas.
+
+Frigoríficos e Abatedouros.
+
+Cozinhas Profissionais e Refeitórios.
+
+Laboratórios e Hospitais.
+
+Áreas de recepção de insumos industriais.</p>
+        </div>
+</div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col about">
+            <img src="assets/logo.png" alt="3D Industrial" class="footer-logo">
+            <p>Inovação e tecnologia em soluções industriais e sustentabilidade desde 2016.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/3dindustrialoficial/"><i class="fab fa-instagram"></i></a>
+                <a href="https://br.linkedin.com/company/3dindustrial"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/3dindustrial.net/"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sics.html">SICS</a></li>
+                <li><a href="catalogo.html">Indústria</a></li>
+                <li><a href="index.html">Quem Somos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h4>Contato</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> (49) 99801-1401</li>
+                <li><i class="fas fa-envelope"></i> comercial@3dindustrial.net</li>
+                <li><i class="fas fa-map-marker-alt"></i> Chapecó - SC</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 3D Industrial. Todos os direitos reservados. | Desenvolvido com Tecnologia 3D</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SICS - Sistema Inteligente de Contentores Soterrados | 3D Industrial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="3D Industrial Logo">
+            </a>
+        </div>
+        <div class="user-actions">
+            <a href="index.html" class="active">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sics.html">SICS</a>
+            
+            <div id="userArea" style="display: inline-block; vertical-align: middle;">
+                <a href="javascript:void(0)" id="guestUser" onclick="openModal()">
+                    <i class="fas fa-user"></i> Entrar
+                </a>
+
+                <div id="loggedUser" style="display:none; position: relative;">
+                    <div class="user-profile-trigger" onclick="toggleUserMenu()" style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-circle" style="font-size: 1.5rem; color: white;"></i>
+                        <span id="userNameNav" style="color: white;">Perfil</span>
+                    </div>
+
+                    <div id="userDropdown" class="user-dropdown" style="display: none; position: absolute; right: 0; top: 100%; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); min-width: 200px; z-index: 1000; margin-top: 10px; padding: 10px 0;">
+                        <div style="padding: 10px 15px; border-bottom: 1px solid #eee;">
+                            <small style="color: #666; display: block;">Logado como:</small>
+                            <strong id="fullUserName" style="color: #333;">Usuário</strong>
+                        </div>
+                        <a href="config.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-user-cog" style="margin-right: 8px;"></i> Meus Dados
+                        </a>
+                        <a href="rastreio.html" style="display: block; padding: 10px 15px; color: #333; text-decoration: none;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Rastrear Pedido
+                        </a>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 5px 0;">
+                        <a href="javascript:void(0)" onclick="logout()" style="display: block; padding: 10px 15px; color: #d9534f; text-decoration: none; font-weight: bold;">
+                            <i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i> Sair da Conta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    
+
+    <a href="https://sics.net.br/" target="_blank" class="sics-banner-link">
+    <section class="banner-sics-container">
+        <img src="assets/SICSSICS.png" alt="Banner SICS Inteligente" class="banner-img">
+    </section>
+</a>
+
+<section class="introducao-sics">
+    <div class="sics-flex-container">
+        
+        <div class="sics-imagem-box animar-entrada">
+            <img src="assets/_DSC0544-removebg-preview (1).png" alt="Equipamento SICS">
+        </div>
+
+        <div class="sics-texto-box">
+            <h1>SICS – Sistema Inteligente de Contentores Soterrados</h1>
+            <p>A SICS é uma solução inovadora e inteligente para o gerenciamento eficiente de resíduos urbanos. Projetada com tecnologia de ponta e visão sustentável, ela se adapta com facilidade às particularidades de qualquer região, tornando-se a principal aliada das cidades inteligentes que buscam eficiência, sustentabilidade e modernização.</p>
+            <p>Com diversos modelos disponíveis, a SICS oferece uma abordagem personalizada para cada realidade, promovendo benefícios significativos em áreas-chave das Smart Cities.</p>
+        </div>
+
+    </div>
+</section>
+
+    <section class="case-sucesso-secao">
+   <section class="secao-case">
+    <div class="case-container">
+        
+        <div class="case-texto">
+            <h2>Case de Sucesso</h2>
+            <p>O case de sucesso das lixeiras subterrâneas em <strong>Chapecó</strong> é a prova concreta de como soluções inovadoras podem transformar a realidade urbana. Em parceria com a <strong>3D Industrial</strong>, a cidade deu um verdadeiro upgrade em suas áreas públicas: mais limpas, organizadas e visualmente agradáveis.</p>
+            
+            <p>Além do ganho estético, o projeto trouxe eficiência operacional, redução de custos e uma gestão de resíduos muito mais inteligente. Esse é o tipo de iniciativa que mostra que inovação e sustentabilidade andam juntas — e fazem a diferença no dia a dia da população. Quer ver sua cidade nesse mesmo nível? Vem com a gente nessa jornada rumo a um futuro mais limpo e eficiente.</p>
+            
+            <a href="https://wa.me/5549998011401" class="btn-case">Quero um projeto assim</a>
+        </div>
+
+        <div class="case-video">
+            <video controls poster="thumb-video.jpg">
+                <source src="assets/jrsics.mp4"video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+    </div>
+</section>
+
+<section class="secao-cidades-inteligentes">
+    <div class="cidades-container">
+        
+        <div class="cidades-texto">
+            <h2>CIDADES INTELIGENTES</h2>
+            <p>As lixeiras subterrâneas da 3D Industrial são peças essenciais no quebra-cabeça das cidades inteligentes do futuro. Imagine uma cidade onde o gerenciamento de resíduos é tão eficiente que você nunca mais vê sacos de lixo nas ruas, onde a coleta é silenciosa, não intrusiva e os odores desagradáveis são coisa do passado.</p>
+            
+            <p>Com a nossa tecnologia de lixeiras subterrâneas, essa visão se torna realidade. Além disso, essas lixeiras representam um passo importante em direção à sustentabilidade, reduzindo o desperdício e promovendo uma gestão de resíduos mais inteligente.</p>
+        </div>
+
+        <div class="cidades-media-column">
+            <div class="cidades-img-box">
+                <img src="assets/SICS.png"alt="Tecnologia Cidades Inteligentes">
+            </div>
+            
+            <a href="assets/catalogo-3D_SICS.pdf" download class="btn-download-pdf">
+                <i class="fas fa-file-pdf"></i> Baixar Catálogo em PDF
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="secao-faq">
+    <div class="faq-container">
+        <h2>DÚVIDAS</h2>
+        <h3>Tudo o que você precisa saber sobre as lixeiras subterrâneas</h3>
+
+        <div class="faq-lista">
+            <div class="faq-item">
+                <button class="faq-pergunta">Por que devo considerar a instalação de lixeiras subterrâneas na minha cidade?</button>
+                <div class="faq-resposta">
+                    <p>As lixeiras subterrâneas oferecem uma série de benefícios significativos para as cidades. Primeiramente, elas melhoram a estética urbana, mantendo as áreas limpas e livres de resíduos visíveis, o que contribui para uma imagem mais positiva da cidade. Além disso, essas lixeiras são mais eficientes, economizando espaço nas calçadas e áreas públicas. Também ajudam a reduzir odores desagradáveis e a propagação de doenças, criando ambientes mais saudáveis. Por fim, a gestão eficiente dos resíduos promove a sustentabilidade e pode resultar em economia de custos a longo prazo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pergunta">Como as lixeiras subterrâneas funcionam?</button>
+                <div class="faq-resposta">
+                    <p>As lixeiras subterrâneas operam por meio de um sistema simples e altamente eficaz. Elas consistem em um contêiner subterrâneo projetado para armazenar resíduos de forma discreta. Quando os usuários desejam descartar o lixo, basta abrir uma tampa na superfície e depositar os resíduos no contêiner subterrâneo. Quando o sistema de monitoramento indica que o contêiner está próximo de sua capacidade máxima, a empresa encarregada da coleta de resíduos é automaticamente notificada. Em seguida, por meio de um sistema de elevação especializado, o caminhão de coleta retira o contêiner cheio e realiza o esvaziamento de forma eficiente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pergunta">As lixeiras subterrâneas são resistentes e duráveis?</button>
+                <div class="faq-resposta">
+                    <p>Sim, as lixeiras subterrâneas são projetadas para serem resistentes e duráveis. Elas são construídas com materiais de alta qualidade que podem suportar condições climáticas adversas e o desgaste causado pelo uso diário. Além disso, são submetidas a testes rigorosos de qualidade para garantir que atendam aos padrões de durabilidade e resistência. Isso garante que as lixeiras subterrâneas funcionem de forma confiável e eficaz ao longo do tempo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pergunta">Como posso implementar lixeiras subterrâneas na minha cidade?</button>
+                <div class="faq-resposta">
+                    <p>A implementação de lixeiras subterrâneas em uma cidade geralmente envolve um processo de planejamento e instalação. É importante começar por avaliar as necessidades da cidade, identificando as áreas-chave onde as lixeiras serão instaladas. Em seguida, é necessário selecionar um fornecedor confiável, como a 3D Industrial, que pode ajudar no projeto e fornecimento dos equipamentos. A instalação é realizada por profissionais qualificados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="secao-prefeituras">
+    <h2>PREFEITURAS PARCEIRAS DA 3D INDUSTRIAL</h2>
+    
+    <div class="carrossel-wrapper">
+        <div class="janela-carrossel">
+    <div class="container-cards animacao-carrossel" id="lista-prefeituras">
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/chapeco.jpg" alt="Chapecó"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE CHAPECÓ</span>
+                </div>
+                
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/saoroque.png" alt="São Roque"></div>
+                    <span class="cidade-nome">ESTÂNCIA TURÍSTICA DE SÃO ROQUE</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/aguasdesaopedro.png" alt="Águas de São Pedro"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE ÁGUAS DE SÃO PEDRO</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/saobento.jpg" alt="São Bento do Sul"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE SÃO BENTO DO SUL</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/aparecida.png" alt="Aparecida"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE APARECIDA</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/criciuma.png" alt="Criciúma"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE CRICÍUMA</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/barretos.jpg" alt="Barretos"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE BARRETOS</span>
+                </div>
+
+                <div class="flag-card">
+                    <div class="flag-img-box"><img src="assets/marechal.png" alt="Marechal Deodoro"></div>
+                    <span class="cidade-nome">PREFEITURA MUNICIPAL DE MARECHAL DEODORO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="whatsapp-widget">
+    <div id="whatsapp-chat-box" class="chat-box-hidden">
+        <div class="chat-header">
+            <i class="fab fa-whatsapp"></i>
+            <span>Atendimento 3D Industrial</span>
+            <button onclick="toggleWhatsApp()" class="close-chat">&times;</button>
+        </div>
+        <div class="chat-body">
+            <p>Olá, como podemos ajudar?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="wa-input" placeholder="Digite sua mensagem...">
+            <button onclick="enviarWhatsApp()" class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="whatsapp-main-button" onclick="toggleWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col about">
+            <img src="assets/logo.png" alt="3D Industrial" class="footer-logo">
+            <p>Inovação e tecnologia em soluções industriais e sustentabilidade desde 2016.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/3dindustrialoficial/"><i class="fab fa-instagram"></i></a>
+                <a href="https://br.linkedin.com/company/3dindustrial"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/3dindustrial.net/"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sics.html">SICS</a></li>
+                <li><a href="catalogo.html">Indústria</a></li>
+                <li><a href="index.html">Quem Somos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h4>Contato</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> (49) 99801-1401</li>
+                <li><i class="fas fa-envelope"></i> comercial@3dindustrial.net</li>
+                <li><i class="fas fa-map-marker-alt"></i> Chapecó - SC</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 3D Industrial. Todos os direitos reservados. | Desenvolvido com Tecnologia 3D</p>
+    </div>
+</footer>
+
+<div id="authModal">
+    <div class="modal-content-auth">
+        <div class="auth-tabs">
+            <button onclick="alternarAuth('login')" class="active">Entrar</button>
+            <button onclick="alternarAuth('cadastro')">Cadastrar</button>
+        </div>
+
+        <form id="formLogin">
+            <div class="auth-group">
+                <label>E-mail</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+            </div>
+            <div class="auth-group">
+                <label>Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="loginSenha" placeholder="********" required>
+            </div>
+            <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+            <button type="submit" class="btn-auth-submit">Acessar Conta</button>
+        </form>
+
+<form id="formCadastro" style="display:none;">
+    <h2 style="text-align:center; margin-bottom:20px;">Criar nova conta</h2>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Nome</label>
+            <i class="fas fa-user"></i>
+            <input type="text" id="regNome" placeholder="Nome" required>
+        </div>
+        <div class="auth-group">
+            <label>E-mail</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="regEmail" placeholder="E-mail" required>
+        </div>
+    </div>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Data de Nascimento</label>
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="regNascimento" required>
+        </div>
+    </div>
+
+    <div class="auth-row">
+        <div class="auth-group">
+            <label>Senha</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" id="regSenha" placeholder="Senha" required>
+        </div>
+        <div class="auth-group">
+            <label>Confirmar</label>
+            <i class="fas fa-check-circle"></i>
+            <input type="password" id="regSenhaConf" placeholder="Confirmar" required>
+        </div>
+    </div>
+
+    <button type="submit" class="btn-auth-submit">FINALIZAR CADASTRO</button>
+</form>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const perguntas = document.querySelectorAll('.faq-pergunta');
+    
+    perguntas.forEach(pergunta => {
+        pergunta.addEventListener('click', function() {
+            const itemPai = this.parentElement;
+            const resposta = this.nextElementSibling;
+
+            // Fecha outros itens (opcional, para ficar mais limpo)
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== itemPai) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-resposta').style.maxHeight = null;
+                }
+            });
+
+            // Abre/Fecha o item clicado
+            itemPai.classList.toggle('active');
+            
+            if (itemPai.classList.contains('active')) {
+                // Define a altura exata do conteúdo para a animação funcionar
+                resposta.style.maxHeight = resposta.scrollHeight + "px";
+            } else {
+                resposta.style.maxHeight = null;
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
